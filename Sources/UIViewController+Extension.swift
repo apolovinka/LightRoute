@@ -31,7 +31,7 @@ extension UIViewController: TransitionHandler {
 	
 	/// This property return tradition VIPER presenter object from "output" property.
     var moduleInput: Any? {
-        return findValue(for: "moduleOutput", in: Mirror(reflecting: self))
+        return findValue(for: "viewModel", in: Mirror(reflecting: self))
     }
     
     private func findValue(for propertyName: String, in mirror: Mirror) -> Any? {
